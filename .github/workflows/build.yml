@@ -16,7 +16,7 @@ jobs:
     timeout-minutes: 15
     container:
       image: quay.io/haraldh/rust-nightly-qemu-x86:latest
-      options: "--privileged"
+      options: "--privileged -v /dev/kvm:/dev/kvm"
     env:
       RUSTUP_HOME: /root/.rustup
       CARGO_HOME:  /root/.cargo
